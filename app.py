@@ -17,7 +17,8 @@ logger = logging.getLogger(__name__)
 def start(bot, update):
     update.message.reply_text('To know 🌧 weather type /weather <city>\n' +
                               'To know 📰 news type /news <source>\n' +
-                              'For more information type /news_start or /weather_start')
+                              'For more information type /news_start or /weather_start\n' +
+                              'Also /news_help, /weather_help')
 
 
 def git(bot, update):
