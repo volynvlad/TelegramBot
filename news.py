@@ -11,8 +11,8 @@ def all_sources():
 
 
 def news_start(bot, update):
-    update.message.reply_text('Hi! I can give you some frash news\n' + 
-                            'Type /sources to get all available sources')
+    update.message.reply_text('Hi! I can give you some fresh news\n' +
+                              'Type /sources to get all available sources')
 
 
 def news_help(bot, update):
@@ -24,7 +24,7 @@ def sources(bot, update):
 
 
 def news(bot, update, args):
-    if args == []:
+    if not args:
         source = 'bbc-news'
     else:
         source = "".join(str(x) for x in args)

@@ -15,9 +15,9 @@ logger = logging.getLogger(__name__)
 
 
 def start(bot, update):
-    update.message.reply_text('To know 🌧 weather type /weather <city>\n' + 
-            'To know 📰 news type /news <source>\n' + 
-            'For more information type /news_start or /weather_start')
+    update.message.reply_text('To know 🌧 weather type /weather <city>\n' +
+                              'To know 📰 news type /news <source>\n' +
+                              'For more information type /news_start or /weather_start')
 
 
 def git(bot, update):
@@ -36,11 +36,10 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("git", git))
     dp.add_handler(CommandHandler("weather_start", weather_start))
-    dp.add_handler(CommandHandler("weather_help", weather_help))
+    dp.add_handler(CommandHandler("weather_start", weather_start))
     dp.add_handler(CommandHandler("weather", weather, pass_args=True))
     dp.add_handler(CommandHandler("news", news, pass_args=True))
     dp.add_handler(CommandHandler("sources", sources))
-
 
     dp.add_error_handler(error)
 
