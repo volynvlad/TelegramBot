@@ -36,8 +36,10 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("git", git))
     dp.add_handler(CommandHandler("weather_start", weather_start))
-    dp.add_handler(CommandHandler("weather_start", weather_start))
+    dp.add_handler(CommandHandler("news_start", news_start))
+    dp.add_handler(CommandHandler("news_help", news_help))
     dp.add_handler(CommandHandler("weather", weather, pass_args=True))
+    dp.add_handler(CommandHandler("weather_help", weather_help))
     dp.add_handler(CommandHandler("news", news, pass_args=True))
     dp.add_handler(CommandHandler("sources", sources))
 

@@ -2,7 +2,7 @@ from config import *
 from newsapi import NewsApiClient                                         # news
 
 
-def all_sources():
+def sources():
     news_api = NewsApiClient(api_key=news_api_key)
     res = []
     for x in news_api.get_sources()['sources']:
